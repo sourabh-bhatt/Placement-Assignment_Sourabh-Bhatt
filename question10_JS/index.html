@@ -1,0 +1,31 @@
+<input type="text" id="searchInput" placeholder="Search" style="width: 200px" />
+<div id="searchResults" style="max-height: 100px; overflow-y: auto"></div>
+
+<script>
+  function debounce(func, delay) {
+    let timeoutId;
+
+    return function (...args) {
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }
+
+  function performSearch() {
+    const searchText = document.getElementById("searchInput").value;
+    const searchResults = document.getElementById("searchResults");
+
+    setTimeout(() => {
+      searchResults.textContent = `Search results for: ${searchText}`;
+    }, 500);
+  }
+
+  const debouncedSearch = debounce(performSearch, 300);
+
+  document
+    .getElementById("searchInput")
+    .addEventListener("input", debouncedSearch);
+</script>
