@@ -1,4 +1,5 @@
-// Fetch data from the API
+// fetching data from the api
+// https://jsonplaceholder.typicode.com/posts
 function fetchPosts() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
