@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(155, 155, 189);
+  }
+  
+  .container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      'navbar navbar navbar navbar'
+      'section aside aside aside';
+    padding: 20px 30px 40px 30px;
+    margin: 20px 30px 40px 30px;
+  }
+  
+  .item {
+    background-color: red;
+    padding: 12px 23px;
+  }
+  
+  #navbar {
+    grid-area: navbar;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    background-color: #38ad9a;
+  }
+  
+  #aside {
+    grid-area: section;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 227, 46);
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+  }
+  
+  #article {
+    grid-area: aside;
+    height: 500px;
+    /* width: 1000px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 161, 47);
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    /* overflow: hidden; */
+  }
+  
+  .image-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    /* margin-top: 100px; */
+  }
+  
+  .image-box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(211, 195, 12);
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    margin: 0 10px;
+    margin-bottom: 10px;
+  }
+  
