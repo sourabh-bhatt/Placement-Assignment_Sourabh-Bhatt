@@ -29,7 +29,6 @@
     padding: 2px;
     grid-area: footer;
     height: 100px;
-
 }
   
 .box{
@@ -41,6 +40,10 @@
 .blue-box{
     background-color: rgb(83, 83, 232);
 }
+
+.Blue-box{
+    background-color: rgb(83, 83, 232);
+}
   
 .grey-box{
     background-color: grey;
@@ -50,4 +53,58 @@
     background-color: grey;
     height: 100%; 
 }
+
+/* Media Query for tablets */
+/* @media screen and (max-width: 768px)  */
+/* @media (min-width: 768px) and (max-width: 1024px)  */
+/* @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .footer {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: auto auto;
+      display: flex;
+      flex-wrap: wrap;
+      height: 200px;
+      width: 500px;
+      grid-gap: 10px;
+    }
+
+    .additional-section {
+      grid-area: additional;
+      background-color: lightgray;
+      height: 100%;
+      width: 100%;
+    }
+  } */
+
+  /* Media query for mobile  */
+  @media only screen and (max-width: 480px) {
+    .grid-container{
+        height: 90vh;
+    }
+
+    .main{
+        grid-area: main;
+        padding-top: 2px;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .main-box{
+        background-color: grey;
+        height: 70%; 
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 25px;
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        height: 330px;
+    }
+    .blue-box{
+        background-color: rgb(83, 83, 232);
+        height: 100px;
+    }
+  }
   
